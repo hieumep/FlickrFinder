@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		51A7E9631C374CEF00EABFC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A7E9621C374CEF00EABFC2 /* AppDelegate.swift */; };
-		51A7E9651C374CEF00EABFC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A7E9641C374CEF00EABFC2 /* ViewController.swift */; };
+		51A7E9651C374CEF00EABFC2 /* FilckFinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A7E9641C374CEF00EABFC2 /* FilckFinderViewController.swift */; };
 		51A7E9681C374CEF00EABFC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51A7E9661C374CEF00EABFC2 /* Main.storyboard */; };
 		51A7E96A1C374CEF00EABFC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51A7E9691C374CEF00EABFC2 /* Assets.xcassets */; };
 		51A7E96D1C374CEF00EABFC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51A7E96B1C374CEF00EABFC2 /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		51A7E95F1C374CEF00EABFC2 /* FIickFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FIickFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51A7E9621C374CEF00EABFC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		51A7E9641C374CEF00EABFC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		51A7E9641C374CEF00EABFC2 /* FilckFinderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilckFinderViewController.swift; sourceTree = "<group>"; };
 		51A7E9671C374CEF00EABFC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		51A7E9691C374CEF00EABFC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51A7E96C1C374CEF00EABFC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				51A7E9621C374CEF00EABFC2 /* AppDelegate.swift */,
-				51A7E9641C374CEF00EABFC2 /* ViewController.swift */,
+				51A7E9641C374CEF00EABFC2 /* FilckFinderViewController.swift */,
 				51A7E9661C374CEF00EABFC2 /* Main.storyboard */,
 				51A7E9691C374CEF00EABFC2 /* Assets.xcassets */,
 				51A7E96B1C374CEF00EABFC2 /* LaunchScreen.storyboard */,
@@ -135,7 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51A7E9651C374CEF00EABFC2 /* ViewController.swift in Sources */,
+				51A7E9651C374CEF00EABFC2 /* FilckFinderViewController.swift in Sources */,
 				51A7E9631C374CEF00EABFC2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

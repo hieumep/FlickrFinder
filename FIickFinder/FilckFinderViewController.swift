@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FlickFinderViewController.swift
 //  FIickFinder
 //
 //  Created by Hieu Vo on 1/1/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FlickFinderViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
