@@ -23,12 +23,20 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3XB-DD-94E">
                                         <rect key="frame" x="0.0" y="0.0" width="580" height="284"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image View!!!!!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7DU-7j-FcQ">
+                                        <rect key="frame" x="208" y="128" width="165" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="3XB-DD-94E" firstAttribute="top" secondItem="dni-qB-rFI" secondAttribute="top" id="2Qf-nM-Lit"/>
+                                    <constraint firstItem="7DU-7j-FcQ" firstAttribute="centerX" secondItem="dni-qB-rFI" secondAttribute="centerX" id="H1G-NE-EkE"/>
                                     <constraint firstItem="3XB-DD-94E" firstAttribute="leading" secondItem="dni-qB-rFI" secondAttribute="leading" id="Klc-qw-smh"/>
                                     <constraint firstAttribute="bottom" secondItem="3XB-DD-94E" secondAttribute="bottom" id="TAM-GD-Xag"/>
+                                    <constraint firstItem="7DU-7j-FcQ" firstAttribute="centerY" secondItem="dni-qB-rFI" secondAttribute="centerY" id="XBO-jE-JV8"/>
                                     <constraint firstAttribute="trailing" secondItem="3XB-DD-94E" secondAttribute="trailing" id="sZN-dW-bVe"/>
                                 </constraints>
                             </view>
@@ -63,7 +71,7 @@
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pel-hj-ugb">
                                                 <rect key="frame" x="0.0" y="0.0" width="255" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5Uk-2E-Uyj">
                                                 <rect key="frame" x="275" y="0.0" width="255" height="30"/>
@@ -139,6 +147,14 @@
                             <constraint firstItem="IQB-GW-RiC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="ypI-VT-gKF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="LonTextSearch" destination="5Uk-2E-Uyj" id="8pZ-ex-CzU"/>
+                        <outlet property="latTextSearch" destination="pel-hj-ugb" id="D7a-MC-pDP"/>
+                        <outlet property="photoImageTitle" destination="rh0-iI-50H" id="Y57-M3-M5Z"/>
+                        <outlet property="photoImageView" destination="3XB-DD-94E" id="EHb-fp-h2v"/>
+                        <outlet property="textImageView" destination="7DU-7j-FcQ" id="0Uc-NG-RrV"/>
+                        <outlet property="textSearch" destination="bnu-jF-YH7" id="Jlc-NE-reH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
