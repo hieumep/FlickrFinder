@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		517EFC991C3DD087000344DC /* ExtendFlickFinderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517EFC981C3DD087000344DC /* ExtendFlickFinderVC.swift */; };
 		51A7E9631C374CEF00EABFC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A7E9621C374CEF00EABFC2 /* AppDelegate.swift */; };
 		51A7E9651C374CEF00EABFC2 /* FilckFinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A7E9641C374CEF00EABFC2 /* FilckFinderViewController.swift */; };
 		51A7E9681C374CEF00EABFC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51A7E9661C374CEF00EABFC2 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		517EFC981C3DD087000344DC /* ExtendFlickFinderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendFlickFinderVC.swift; sourceTree = "<group>"; };
 		51A7E95F1C374CEF00EABFC2 /* FIickFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FIickFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51A7E9621C374CEF00EABFC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51A7E9641C374CEF00EABFC2 /* FilckFinderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilckFinderViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				51A7E9691C374CEF00EABFC2 /* Assets.xcassets */,
 				51A7E96B1C374CEF00EABFC2 /* LaunchScreen.storyboard */,
 				51A7E96E1C374CEF00EABFC2 /* Info.plist */,
+				517EFC981C3DD087000344DC /* ExtendFlickFinderVC.swift */,
 			);
 			path = FIickFinder;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			files = (
 				51A7E9651C374CEF00EABFC2 /* FilckFinderViewController.swift in Sources */,
 				51A7E9631C374CEF00EABFC2 /* AppDelegate.swift in Sources */,
+				517EFC991C3DD087000344DC /* ExtendFlickFinderVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +288,7 @@
 				51A7E9731C374CEF00EABFC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
