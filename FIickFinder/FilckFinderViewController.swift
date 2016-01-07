@@ -32,6 +32,7 @@ class FlickFinderViewController: UIViewController,UITextFieldDelegate {
     let LAT_MAX = 90.0
     let LON_MIN = -180.0
     let LON_MAX = 180.0
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,15 +59,61 @@ class FlickFinderViewController: UIViewController,UITextFieldDelegate {
     @IBAction func textSearch(sender: AnyObject) {
         guard textSearch.text == "" else{
             textImageView.text = "Photo is loading..."
+            self.textImageView.alpha = 1.0
+            self.photoImageView.alpha = 0.3
             let arguments :[String:NSObject] = ["method" : METHOD_NAME, "api_key" : API_KEY, "text" : self.textSearch.text!, "extras" : EXTRAS, "safe_search" : SAFE_SEARCH, "format" : DATA_FORMAT, "nojsoncallback" : NO_JSON_CALLBACK]
             getImageFromFlickrBySearch(arguments)
             return
         }
     }
     
+    @IBAction func latLongTitudeSearch(sender: AnyObject) {
+        let checkLatitude = checkLatitudeTexField(latTextSearch, min: LAT_MIN, max: LAT_MAX, label: "Latitude")
+        let checkLongitude = checkLatitudeTexField(LonTextSearch, min: LON_MIN, max: LON_MAX, label: "Longitude")
+        if checkLatitude && checkLongitude {
+            let bbox = createBoundingBoxString()
+            textImageView.text = "Photo is loading..."
+            self.textImageView.alpha = 1.0
+            self.photoImageView.alpha = 0.3
+            let arguments :[String:NSObject] = ["method" : METHOD_NAME, "api_key" : API_KEY, "bbox" : bbox, "extras" : EXTRAS, "safe_search" : SAFE_SEARCH, "format" : DATA_FORMAT, "nojsoncallback" : NO_JSON_CALLBACK]
+            getImageFromFlickrBySearch(arguments)
+        }
+    }
+  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // Check Latitude or Longitude is empty or not , and check value in [min, max]
+    func checkLatitudeTexField(textField:UITextField, min:Double, max : Double, label : String) -> Bool{
+        if (textField.text!.isEmpty) {
+            self.photoImageTitle.text = "Latitude or Longitude fields can't be empty!!!"
+            return false
+        }else
+        {
+            let value = (textField.text! as NSString).doubleValue
+            if (value >= min) && (value <= max){
+                return true
+            }else{
+                self.photoImageTitle.text = "\(label) should be [\(min),\(max)]"
+                return false
+            }
+        }
+    }
+    
+    func createBoundingBoxString() -> String {
+        
+        let latitude = (self.latTextSearch.text! as NSString).doubleValue
+        let longitude = (self.LonTextSearch.text! as NSString).doubleValue
+        
+        /* Fix added to ensure box is bounded by minimum and maximums */
+        let bottom_left_lon = max(longitude - BOUNDING_BOX_HALF_WIDTH, LON_MIN)
+        let bottom_left_lat = max(latitude - BOUNDING_BOX_HALF_HEIGHT, LAT_MIN)
+        let top_right_lon = min(longitude + BOUNDING_BOX_HALF_HEIGHT, LON_MAX)
+        let top_right_lat = min(latitude + BOUNDING_BOX_HALF_HEIGHT, LAT_MAX)
+        
+        return "\(bottom_left_lon),\(bottom_left_lat),\(top_right_lon),\(top_right_lat)"
     }
     
     func getImageFromFlickrBySearch(arguments : [String:NSObject]){
@@ -220,6 +267,7 @@ class FlickFinderViewController: UIViewController,UITextFieldDelegate {
                 if let imageData = NSData(contentsOfURL: imageURL!) {
                     dispatch_async(dispatch_get_main_queue(), {
                         self.textImageView.alpha = 0.0
+                        self.photoImageView.alpha = 1.0
                         self.photoImageView.image = UIImage(data: imageData)
                         self.photoImageTitle.text = photoTitle
                     })
@@ -257,4 +305,10 @@ class FlickFinderViewController: UIViewController,UITextFieldDelegate {
         
         return (!urlVars.isEmpty ? "?" : "") + urlVars.joinWithSeparator("&")
     }
+}
+extension String {
+    func toDouble() -> Double? {
+        return NSNumberFormatter().numberFromString(self)?.doubleValue
+    }
+
 }
